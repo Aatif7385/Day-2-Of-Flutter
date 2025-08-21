@@ -11,12 +11,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Shalimar Traders"),
-        shadowColor: Color.fromARGB(240, 234, 235, 234),
+        shadowColor: const Color.fromARGB(255, 235, 228, 228),
       ),
-      drawerScrimColor: Color.fromARGB(174, 22, 3, 109),
-      backgroundColor: Color.fromARGB(232, 0, 0, 14),
+      drawerScrimColor: Colors.lightBlue,
+      backgroundColor: const Color.fromARGB(255, 194, 186, 186),
       body: Center(
-        child: Container(child: Text("Welcome to $days of flutter")),
+        child: Container(
+          child: Text(
+            "Welcome To Home Page ",
+            style: TextStyle(color: Colors.redAccent, fontSize: 40),
+          ),
+        ),
       ),
       drawer: Drawer(),
     );
