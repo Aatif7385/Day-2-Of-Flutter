@@ -14,12 +14,17 @@ class HomePage extends StatelessWidget {
         shadowColor: const Color.fromARGB(255, 235, 228, 228),
       ),
       drawerScrimColor: Colors.lightBlue,
-      backgroundColor: const Color.fromARGB(255, 194, 186, 186),
+      backgroundColor: const Color.fromARGB(255, 20, 18, 18),
       body: Center(
+        // ignore: avoid_unnecessary_containers
         child: Container(
           child: Text(
             "Welcome To Home Page ",
-            style: TextStyle(color: Colors.redAccent, fontSize: 40),
+            style: TextStyle(
+              color: const Color.fromARGB(255, 248, 243, 243),
+              fontSize: 40,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
       ),

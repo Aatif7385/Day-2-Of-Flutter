@@ -1,6 +1,8 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+// ignore: unused_import
+import 'package:flutter_application_1/utils/routs.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -15,12 +17,11 @@ class LoginPage extends StatelessWidget {
           children: [
             Image.asset(
               "assets/images/login_image.png",
-              width: 500,
-              height: 400,
-
-              // fit: BoxFit.cover,
+              // width: 300,
+              // height: 200,
+              fit: BoxFit.cover,
             ),
-            SizedBox(height: 2),
+            SizedBox(height: 20),
             Text(
               "Welcome",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
@@ -28,9 +29,9 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 4.0,
-                horizontal: 500.0,
-              ), child
-             : Column(
+                horizontal: 100.0,
+              ),
+              child: Column(
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
@@ -45,14 +46,22 @@ class LoginPage extends StatelessWidget {
                       labelText: "Password ",
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 40.0),
+
                   ElevatedButton(
                     onPressed: () {
-                      // ignore: avoid_print
-                      print("Clicked ");
+                      Navigator.pushNamed(context, Rrouts.homerouts);
                     },
-                    child: Text("Login"),
-                    style: TextButton.styleFrom(foregroundColor: Colors.blue),
+                    child: Text("login"),
+
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(150, 40),
+                      backgroundColor: const Color.fromARGB(255, 91, 17, 228),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
                   ),
                 ],
               ),
